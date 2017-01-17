@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+.ui-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.ui-row {
+  font-size: 40px;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+.ui-col {
+  line-height: 100px;
+  flex: 0 0 25%;
+  min-height: 100px;
+  border: 1px solid #fff;
+}
+
+.ui-col:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.ui-header {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  font-size: 20px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  min-width: 100%;
+}
+
+.vowels {
+  color: #fff;
+  min-width: 42%;
+  padding-right: 8%;
+}
+.vowels__col {
+  background: #e74c3c;
+}
+
+.vowels-header {
+  color: #fff;
+  background: #e74c3c;
+}
+
+.diphtongs {
+  min-width: 48%;
+  padding-left: 2%;
+  color: #fff;
+}
+
+.diphtongs__col {
+  background: #2ecc71;
+}
+
+.diphtongs-header {
+  background: #2ecc71;
+}
+
+
+.consonants {
+  min-width: 100%;
+  color: #fff;
+  padding-top: 4%;
+}
+
+.consonants__col {
+  background: #1abc9c;
+  flex: 0 0 12.5%;
+}
+
+.consonants-header {
+  background: #1abc9c;
+}
