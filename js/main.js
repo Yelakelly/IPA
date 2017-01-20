@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function(){
       return arr;
   }
 
-
   var engUI = function(el, config){
 
     this.el = el;
@@ -27,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function(){
       'buttonClass': '.ui__button',
       'oWordClass': '.ui__o-word'
     };
+
+    for(var item in config){
+      this.defaults[item] = config[item];
+    }
 
      this.sounds =  [],
      this.words  = [];
@@ -164,9 +167,28 @@ engUI.prototype.init = function(){
   vowels.addWord(vowelsWords);
   vowels.init();
 
-  var diftongs = new engUI(document.querySelector('.diphtongs'));
+  var diphthongsWords = [
+      ['here is','what', 'up'],
+      ['we', 'are', 'they'],
+      ['yor', 'those', 'these']
+  ];
 
-  diftongs.addSound(soundNames);
+  var diphthongs = new engUI(document.querySelector('.diphtongs'), {
+        path: 'sounds/diphthongs/'
+  });
+
+  var diphthongsSounds = [
+      'ie',
+      'ee',
+      'ue',
+      'au',
+      'eu',
+      'ei',
+      'ai',
+      'oi'
+  ];
+
+  diphthongs.addSound(diphthongsSounds);
 
   var vowelsWords   = [
       ['I','am', 'stupid'],
@@ -175,8 +197,8 @@ engUI.prototype.init = function(){
   ];
 
 
-  diftongs.addWord(vowelsWords);
-  diftongs.init();
+  diphthongs.addWord(vowelsWords);
+  diphthongs.init();
 
 
 });
