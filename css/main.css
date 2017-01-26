@@ -2,12 +2,17 @@
   box-sizing: border-box;
 }
 
+body{
+  margin:0px;
+}
+
 .ui__container {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  padding:10px;
 }
 
 .ui__row {
@@ -31,7 +36,7 @@
   cursor: pointer;
 }
 
-.ui__col:hover .ui__button:before{
+.ui__col:hover:not(.is-empty) .ui__button:before{
   opacity:1;
 }
 
@@ -82,7 +87,7 @@
 
 .vowels {
   color: #fff;
-  min-width: 42%;
+  flex: 0 0 42%;
   margin-right: 8%;
   position: relative;
 }
@@ -145,7 +150,7 @@
 }
 
 .diphtongs {
-  min-width: 48%;
+  flex: 0 0 48%;
   margin-left: 2%;
   color: #fff;
   position: relative;
@@ -178,4 +183,19 @@
 
 .consonants-overlay{
   background: #1abc9c;
+}
+
+
+@media(max-width: 768px){
+  .vowels,
+  .diphtongs{
+        flex: 0 0 100%;
+        margin: 10px 0px;
+  }
+}
+
+@media(max-width: 480px){
+  .ui__col{
+    flex: 0 0 50%;
+  }
 }

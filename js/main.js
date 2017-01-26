@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function(){
       'oWordClass': '.ui__o-word'
     };
 
+    this.currentSound = '';
+
     for(var item in config){
       this.defaults[item] = config[item];
     }
@@ -36,121 +38,129 @@ document.addEventListener('DOMContentLoaded', function(){
   };
 
 
-engUI.prototype.buildPath = function(path, ext, name){
-  if(!Array.isArray(name)){
-      return path + name + ext;
-  }
+  engUI.prototype.buildPath = function(path, ext, name){
+    if(!Array.isArray(name)){
+        return path + name + ext;
+    }
 
-  for(var i = 0, paths = []; i < name.length; i++){
-      paths.push(path + name[i] + ext);
-  }
+    for(var i = 0, paths = []; i < name.length; i++){
+        paths.push(path + name[i] + ext);
+    }
 
-  return paths;
-};
+    return paths;
+  };
 
 
-engUI.prototype.addSound = function(soundName){
-  var soundName = this.buildPath(this.defaults['path'], this.defaults['ext'], soundName);
+  engUI.prototype.addSound = function(soundName){
+    var soundName = this.buildPath(this.defaults['path'], this.defaults['ext'], soundName);
 
-  if(!Array.isArray(soundName)){
-      this.sounds.push(soundName);
-  }
+    if(!Array.isArray(soundName)){
+        this.sounds.push(soundName);
+    }
 
-  for(var i = 0; i < soundName.length; i++){
-    this.sounds.push(soundName[i]);
-  }
+    for(var i = 0; i < soundName.length; i++){
+      this.sounds.push(soundName[i]);
+    }
 
-};
+  };
 
-engUI.prototype.playSound = function(index){
-  console.log(this.sounds[index]);
-  new Audio(this.sounds[index]).play();
-};
+  engUI.prototype.playSound = function(index){
+    if(this.currentSound){
+      this.currentSound.pause();
+    }
 
-engUI.prototype.removeSound = function(index){
-  return this.sounds.splice(index, 1)[0];
-};
+    this.currentSound = new Audio(this.sounds[index]);
+    this.currentSound.play();
+  };
 
-engUI.prototype.getSound = function(){
- return this.sounds;
-};
+  engUI.prototype.removeSound = function(index){
+    return this.sounds.splice(index, 1)[0];
+  };
 
-engUI.prototype.addWord = function(word){
-  if(!Array.isArray(word)){
-      this.words.push(word);
-  }
+  engUI.prototype.getSound = function(){
+   return this.sounds;
+  };
 
-  for(var i = 0; i < word.length; i++){
-    this.words.push(word[i]);
-  }
-};
+  engUI.prototype.addWord = function(word){
+    if(!Array.isArray(word)){
+        this.words.push(word);
+    }
 
-engUI.prototype.getWords = function(){
-  return this.words;
-};
+    for(var i = 0; i < word.length; i++){
+      this.words.push(word[i]);
+    }
+  };
 
-engUI.prototype.init = function(){
+  engUI.prototype.getWords = function(){
+    return this.words;
+  };
 
-  let uiContainer     = this.el.querySelectorAll(this.defaults['colClass']),
-      uiOverlay       = this.el.querySelector(this.defaults['overlayClass']),
-      uiCloseButton   = this.el.querySelector(this.defaults['closeButton']);
+  engUI.prototype.init = function(){
 
-  let _self = this;
- 
+    let uiContainer     = this.el.querySelectorAll(this.defaults['colClass']),
+        uiOverlay       = this.el.querySelector(this.defaults['overlayClass']),
+        uiCloseButton   = this.el.querySelector(this.defaults['closeButton']);
 
-  for(let i = 0; i < this.sounds.length; i++){
+    let _self = this;
+   
 
-    let uiWord          = this.words[i],
-        uiSound         = this.sounds[i],
-        uiCurrentCol    = uiContainer[i],
-        uiCurrentButton = uiCurrentCol.querySelector(this.defaults['buttonClass']);
+    for(let i = 0; i < this.sounds.length; i++){
 
-    uiCurrentCol.addEventListener('click', function(e){
-      if(e.target !== this){
-          return false;
-      }
-      _self.playSound(i);
-    });
+      let uiWord          = this.words[i],
+          uiSound         = this.sounds[i],
+          uiCurrentCol    = uiContainer[i],
+          uiCurrentButton = uiCurrentCol.querySelector(this.defaults['buttonClass']);
 
-    uiCurrentButton.addEventListener('click', function(){
-
-      for(let j = 0; j < uiWord.length; j++){
-        var word = document.createElement("div");
-        word.setAttribute('class', _self.defaults['oWordClass'].replace('.', ''));
-
-        var text  = document.createElement("span"),
-            text2 = document.createElement("span");
-
-        var t = text.appendChild(text2);
-
-        t.innerHTML = uiWord[j];
-        word.appendChild(text);
-
-        word.addEventListener('click', function(){
-            console.log(this.innerHTML);
-        });
-
-        uiOverlay.appendChild(word);
+      if(!uiWord){
+        uiCurrentCol.classList.add('is-empty');
       }
 
-      uiOverlay.classList.add('is-active')
-  });
+      uiCurrentCol.addEventListener('click', function(e){
+        if(e.target !== this){
+            return false;
+        }
+        _self.playSound(i);
+      });
 
-  }
+      uiCurrentButton.addEventListener('click', function(){
 
-  uiCloseButton.addEventListener('click', function(){
-    var oWords = document.querySelectorAll(_self.defaults['oWordClass']);
+          for(let j = 0; j < uiWord.length; j++){
+            var word = document.createElement("div");
+            word.setAttribute('class', _self.defaults['oWordClass'].replace('.', ''));
 
-    oWords.forEach(function(elem){
-        elem.parentNode.removeChild(elem);
+            var text  = document.createElement("span"),
+                text2 = document.createElement("span");
+
+            var t = text.appendChild(text2);
+
+            t.innerHTML = uiWord[j];
+            word.appendChild(text);
+
+            word.addEventListener('click', function(){
+                console.log(this.innerHTML);
+            });
+
+            uiOverlay.appendChild(word);
+          }
+
+          uiOverlay.classList.add('is-active')
+      });
+
+    }
+
+    uiCloseButton.addEventListener('click', function(){
+      var oWords = document.querySelectorAll(_self.defaults['oWordClass']);
+
+      oWords.forEach(function(elem){
+          elem.parentNode.removeChild(elem);
+      });
+
+      uiOverlay.classList.remove('is-active');
+
     });
 
-    uiOverlay.classList.remove('is-active');
 
-  });
-
-
-};
+  };
 
 
   var vowels       = new engUI(document.querySelector('.vowels'), {
