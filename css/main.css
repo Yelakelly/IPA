@@ -164,6 +164,7 @@
   min-width: 100%;
   color: #fff;
   padding-top: 4%;
+  position: relative;
 }
 
 .consonants__col {
@@ -172,5 +173,9 @@
 }
 
 .consonants-header {
+  background: #1abc9c;
+}
+
+.consonants-overlay{
   background: #1abc9c;
 }

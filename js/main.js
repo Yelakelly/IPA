@@ -153,10 +153,15 @@ engUI.prototype.init = function(){
 };
 
 
-  var soundNames  = rangeNumbers(1, 4),
-      vowels      = new engUI(document.querySelector('.vowels'));
+  var vowels       = new engUI(document.querySelector('.vowels'), {
+        path: 'sounds/vowels/'
+  });
 
-  vowels.addSound(soundNames);
+  var vowelsSounds = ['æ', 'ɛ', 'i', 'ɔ', 
+                      'ə', 'u', 'ʌ',
+                      'a_l', 'i_l', 'u_l', 'ɔ_l', 'ə_l'];
+
+  vowels.addSound(vowelsSounds);
 
   var vowelsWords   = [
       ['here is','what', 'up'],
@@ -190,15 +195,30 @@ engUI.prototype.init = function(){
 
   diphthongs.addSound(diphthongsSounds);
 
-  var vowelsWords   = [
+  var diphthongsWords   = [
       ['I','am', 'stupid'],
       ['Do', 'are', 'they'],
       ['yor', 'those', 'these']
   ];
 
 
-  diphthongs.addWord(vowelsWords);
+  diphthongs.addWord(diphthongsWords);
   diphthongs.init();
+
+  // consonants
+
+  var consonants = new engUI(document.querySelector('.consonants'), {
+        path: 'sounds/consonants/'
+  });
+
+  var consonantsSounds = [
+    'p', 'f', 't', 'θ', 'tʃ', 's', 'ʃ','k',
+    'b', 'v', 'd', 'ð', 'dʒ', 'z', 'ʒ', 'g',
+    'h', 'm', 'n', 'ŋ', 'r', 'l', 'w', 'j'
+  ];
+
+  consonants.addSound(consonantsSounds);
+  consonants.init();
 
 
 });
