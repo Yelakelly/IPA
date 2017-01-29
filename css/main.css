@@ -28,23 +28,37 @@ h1{
 .ui__container {
   max-width: 1000px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding:10px;
 }
 
 .ui__row {
   font-size: 40px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .ui__col {
   line-height: 100px;
-  flex: 0 0 25%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
   min-height: 100px;
   border: 1px solid #fff;
   position: relative;
@@ -87,6 +101,7 @@ h1{
   line-height: 30px;
   width: 30px;
   color: #fff;
+  -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
   z-index: 1;
 }
@@ -104,12 +119,15 @@ h1{
 
   font-size: 20px;
   line-height: 20px;
+  -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
 
 .vowels {
   color: #fff;
-  flex: 0 0 42%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 42%;
+          flex: 0 0 42%;
   margin-right: 8%;
   position: relative;
 }
@@ -122,16 +140,26 @@ h1{
   position: absolute;
   width: 100%;
   height: 100%;
-  
+  left:0px;
+  top:0px;
   z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   opacity:0;
   pointer-events: none;
-  flex-flow: row wrap;
-  align-items: stretch;
-  align-content: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
+  -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
 
@@ -154,8 +182,12 @@ h1{
 }
 
 .ui__o-word{
-  flex: 0 0 25%;
-  flex-grow: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding:0px 5px;
   position: relative;
 }
@@ -169,10 +201,15 @@ h1{
 }
 
 .ui__o-word > span{
+    -webkit-transition: all 0.4s ease;
     transition:all 0.4s ease;
     height: 100%;
     display: block;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -186,7 +223,9 @@ h1{
 }
 
 .diphtongs {
-  flex: 0 0 48%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
   margin-left: 2%;
   color: #fff;
   position: relative;
@@ -204,13 +243,15 @@ h1{
 .consonants {
   min-width: 100%;
   color: #fff;
-  margin-top: 4%;
+  margin-top: 30px;
   position: relative;
 }
 
 .consonants__col {
   background: #1abc9c;
-  flex: 0 0 12.5%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 12.5%;
+          flex: 0 0 12.5%;
 }
 
 .consonants-header {
@@ -225,13 +266,17 @@ h1{
 @media(max-width: 768px){
   .vowels,
   .diphtongs{
-        flex: 0 0 100%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
         margin: 10px 0px;
   }
 }
 
 @media(max-width: 480px){
   .ui__col{
-    flex: 0 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 }
