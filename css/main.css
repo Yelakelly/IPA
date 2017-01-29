@@ -6,6 +6,25 @@ body{
   margin:0px;
 }
 
+h1{
+  text-align: center;
+  font-family: "Comfortaa", sans-serif;
+  color:#333;
+  margin:0px 0px 40px 0px;
+  padding: 30px 0px;
+  background: #eee;
+}
+
+.site-footer{
+  text-align: center;
+  padding:40px 0px;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.site-footer a{
+  color:#333;
+}
+
 .ui__container {
   max-width: 1000px;
   margin: 0 auto;
@@ -60,11 +79,14 @@ body{
 
 .ui__overlay-close{
   position: absolute;
-  right:10px;
-  top:10px;
+  right: 0px;
+  background: rgba(0,0,0,0.2);
+  top: 0px;
   height: 30px;
-  width: 20px;
-  color:#fff;
+  font-size: 14px;
+  line-height: 30px;
+  width: 30px;
+  color: #fff;
   transition: opacity 0.4s ease;
   z-index: 1;
 }
@@ -121,6 +143,11 @@ body{
   background: #2ecc71;
 }
 
+.consonants__overlay{
+  background: #1abc9c;
+}
+
+
 .ui__overlay.is-active{
   opacity:1;
   pointer-events: auto;
@@ -133,7 +160,16 @@ body{
   position: relative;
 }
 
+.ui__o-word:hover{
+  cursor: pointer;
+}
+
+.ui__o-word:hover > span{
+  opacity: 0.7;
+}
+
 .ui__o-word > span{
+    transition:all 0.4s ease;
     height: 100%;
     display: block;
     align-items: center;
@@ -168,7 +204,7 @@ body{
 .consonants {
   min-width: 100%;
   color: #fff;
-  padding-top: 4%;
+  margin-top: 4%;
   position: relative;
 }
 
