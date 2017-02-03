@@ -1,0 +1,1240 @@
+{
+ "vowels": {
+  "æ": {
+    "words": {
+      "and": {
+
+      },
+      "bad": {
+
+      },
+      "back": {
+
+      },
+      "pass": {
+
+      },
+      "had": {
+
+      },
+      "have": {
+
+      },
+      "jacket": {
+
+      },
+      "happened": {
+
+      },
+      "natural": {
+
+      },
+      "sample": {
+
+      },
+      "action": {
+
+      },
+      "after": {
+
+      }
+    }
+  },
+  "ɛ": {
+    "words": {
+        "said": {
+
+      }, 
+      "says": {
+
+      }, 
+      "friend": {
+
+      }, 
+      "guest": {
+
+      }, 
+        
+        "guess": {
+
+        }, 
+        "when": {
+
+        }, 
+        "them": {
+
+        }, 
+        "head": {
+
+        }, 
+        
+        "end": {
+
+        }, 
+        "best": {
+
+        }, 
+        "test": {
+
+        }, 
+        "red": {
+          
+        }
+    }
+  }, 
+  "i": {
+    "words": {
+        "begin": {
+
+      }, 
+      "big": {
+
+      }, 
+      "bit": {
+
+      }, 
+      "bring": {
+
+      }, 
+      "did": {
+
+      }, 
+        "different": {
+
+        }, 
+        "finish": {
+
+        }, 
+        "fish": {
+
+        }, 
+        "fit": {
+
+        }, 
+        "give": {
+
+        }, 
+        "hit": {
+
+        }, 
+        "interest": {
+
+        }
+    }
+  },
+  "ɔ": {
+    "words": {
+       "ought": {
+
+      },
+
+      "ball": {
+
+      },
+
+      "tall": {
+
+      },
+
+      "mall": {
+
+      },
+        
+      "law": {
+
+      },
+
+      "call": {
+
+      },
+
+      "jaw": {
+
+      },
+
+      "or": {
+
+      },
+      
+      "more": {
+
+      },
+
+      "afford": {
+
+      },
+
+      "raw": {
+
+      },
+
+      "caught":{
+
+      }
+    }
+  },
+  "ə": {
+    "words": {
+      "never": {
+
+      },
+      "after": {
+
+      },
+      "just": {
+
+      },
+      "under": {
+
+      },
+      
+      "other": {
+
+      },
+      "even": {
+
+      },
+      "woman": {
+
+      },
+      "family": {
+
+      },
+      
+      "student": {
+
+      },
+      "us": {
+
+      },
+      "again": {
+
+      },
+      "another": {
+
+      }
+    }
+  },
+  "u": {
+    "words": {
+      "look": {
+
+      }, 
+      "book": {
+
+      }, 
+      "foot": {
+
+      }, 
+      "good": {
+
+      }, 
+      "put": {
+
+      }, 
+      "push": {
+
+      }, 
+      "pull": {
+
+      }, 
+      "full": {
+
+      }, 
+      "sugar": {
+
+      }, 
+      "would": {
+
+      }, 
+      "could": {
+
+      }, 
+      "should": {
+
+      }
+    }
+  },
+  "ʌ":{
+    "words": {
+      "some": {
+
+      },
+      "company": {
+
+      },
+      "much": {
+
+      },
+      "country": {
+
+      } ,
+      "other": {
+
+      },
+      "under": {
+
+      },
+      "until": {
+
+      },
+      "understand": {
+
+      } ,
+      "another": {
+
+      },
+      "come": {
+
+      },
+      "such": {
+
+      },
+      "become": {
+
+      }
+    }
+  },
+  "a_l": {
+    "words": {
+      "army": {
+
+      },
+      "car": {
+
+      },
+      "party": {
+
+      },
+      "garden": {
+
+      },
+      "park": {
+
+      } ,
+      "father": {
+
+      },
+      "calm": {
+
+      },
+      "palm": {
+
+      },
+      "drama": {
+
+      },
+      "last": {
+
+      } ,
+      "class": {
+
+      },
+      "dance": {
+
+      },
+      "castle": {
+
+      },
+      "half": {
+
+      }
+    }
+  },
+  "i_l": {
+    "words": {
+      "be": {
+
+      },
+      "see": {
+
+      },
+      "meet": {
+
+      },
+      "sleep": {
+
+      },
+      "meal": {
+
+      } ,
+      "read": {
+
+      },
+      "leave": {
+
+      },
+      "sea": {
+
+      },
+      "team": {
+
+      } ,
+      "field": {
+
+      },
+      "believe": {
+
+      },
+      "receive":{
+
+      }
+    }
+  },
+  "u_l": {
+    "words": {
+      "do": {
+
+      },
+      "juice": {
+
+      },
+      "room": {
+
+      },
+      "move": {
+
+      },
+      
+      "jewel": {
+
+      },
+      "fruit": {
+
+      },
+      "group": {
+
+      },
+      "flew": {
+
+      },
+      
+      "crew": {
+
+      },
+      "chew": {
+
+      },
+      "blue": {
+
+      },
+      "through": {
+
+      }
+    }
+  },
+  "ɔ_l": {
+    "words": {
+      "for":{
+
+      }, 
+      "more":{
+
+      }, 
+      "also":{
+
+      }, 
+      "talk":{
+
+      }, 
+      "almost":{
+
+      }, 
+      "although":{
+
+      }, 
+      "already":{
+
+      }, 
+      "organization":{
+
+      }, 
+      "call":{
+
+      },
+      "water":{
+
+      },
+      "important":{
+
+      },
+      "small":{
+
+      }
+    }
+  },
+  "ə_l": {
+    "words": {
+      "bird": {
+
+      },
+      "burden": {
+
+      },
+      "heard": {
+
+      },
+      "earth": {
+
+      },
+
+      "occur": {
+
+      },
+      "fur": {
+
+      },
+      "word": {
+
+      },
+      "hurt": {
+
+      },
+
+      "search": {
+
+      },
+      "circle": {
+
+      },
+      "thirteen": {
+
+      },
+      "return":{
+
+      }
+    }
+  }
+ },
+ "diphtongs": {
+  "ie": {
+    "words": {
+      "year":{
+
+      },
+      "hear": {
+
+      },
+      "really": {
+
+      },
+      "area": {
+
+      },
+      "clear": {
+
+      },
+      "material": {
+
+      },
+      "here": {
+
+      },
+      "ear": {
+
+      },
+      "nearly": {
+
+      },
+      "idea": {
+
+      },
+      "near": {
+
+      },
+      "career": {
+
+      }
+    }
+  },
+  "ee": {
+    "words": {
+        "their": {
+
+        },
+        "where": {
+
+        },
+        "area": {
+
+        },
+        "there": {
+
+        },
+        "parent": {
+
+        },
+        "air": {
+
+        },
+        "yeah": {
+
+        },
+        "various": {
+
+        },
+        "care": {
+
+        },
+        "wear": {
+
+        },
+        "hair": {
+
+        },
+        "share": {
+
+        }
+    }
+  },
+  "ue": {
+    "words": {
+      "during": {
+
+      },
+      "security": {
+
+      },
+      "hour": {
+
+      },
+      "poor": {
+
+      },
+      "tour": {
+
+      },
+      "cure": {
+
+      },
+      "jury": {
+
+      },
+      "pure": {
+
+      },
+      "sure": {
+
+      },
+      "dour": {
+
+      },
+      "manicure": {
+
+      },
+      "mature": {
+
+      }
+    }
+  },
+  "au": {
+    "words": {
+        "out": {
+
+        },
+        "owl": {
+
+        },
+        "house": {
+
+        },
+        "around": {
+
+        },
+        "about": {
+
+        },
+        "account": {
+
+        },
+        "brown": {
+
+        },
+        "tower": {
+
+        },
+        "browse": {
+
+        },
+        "how": {
+
+        },
+        "now": {
+
+        },
+        "row": {
+        }
+    }
+  },
+  "eu": {
+    "words": {
+        "alone": {
+
+        },
+        "gold": {
+
+        },
+        "close": {
+
+        },
+        "no": {
+
+        },
+        "go": {
+
+        },
+        "hole": {
+
+        },
+        "hope": {
+
+        },
+        "roll": {
+
+        },
+        "lone": {
+
+        },
+        "role": {
+
+        },
+        "stone": {
+
+        },
+        "almost": {
+
+        }
+    }
+  },
+  "ei": {
+    "words": {
+        "paint": {
+
+        },
+        "remain": {
+
+        },
+        "rain": {
+
+        },
+        "stay": {
+
+        },
+        "sale": {
+
+        },
+        "pain": {
+
+        },
+        "gain": {
+
+        },
+        "eight": {
+
+        },
+        "great": {
+
+        },
+        "ballet": {
+
+        },
+        "break": {
+
+        },
+        "weight": {
+
+        }
+    }
+  },
+  "ai": {
+    "words": {
+      "die":{
+
+      },
+      "lie": {
+
+      },
+      "find": {
+
+      },
+      "child": {
+
+      },
+      "I": {
+
+      },
+      "kind": {
+
+      },
+      "high": {
+
+      },
+      "light": {
+
+      },
+      "try": {
+
+      },
+      "why": {
+
+      },
+      "by": {
+
+      },
+      "cry": {
+
+      }
+    }
+  },
+  "oi":{
+      "words": {
+        "boy": {
+
+        },
+        "destroy": {
+
+        },
+        "employ": {
+
+        },
+        "coin": {
+
+        },
+        "choice": {
+
+        },
+        "enjoy": {
+
+        },
+        "join": {
+
+        },
+        "royal": {
+
+        },
+        "toy": {
+
+        },
+        "oil": {
+
+        },
+        "noise": {
+
+        },
+        "soil": {
+
+        }
+      }
+  }
+ },
+ "consonants": {
+    "p": {
+      "words": {
+        "part": {},
+        "pause": {},
+        "people": {},
+        "place": {},
+        "problem": {},
+        "put": {},
+        "appear": {},
+        "opinion": {},
+        "report": {},
+        "transport": {},
+        "help": {},
+        "hope": {}
+      }
+    },
+    "f": {
+      "words": {
+        "face": {
+
+        },
+        "fail":{
+
+        },
+        "belief":{
+
+        },
+        "brief":{
+
+        },
+        "chief": {
+
+        },
+        "after":{
+
+        },
+        "before":{
+
+        },
+        "cough":{
+
+        },
+        "enough": {
+
+        },
+        "laugh":{
+
+        },
+        "phase":{
+
+        },
+        "phrase":{
+
+        }
+      }
+    },
+    "t": {
+      "words": {
+        "take":{},
+        "talk":{},
+        "team":{},
+        "city":{},
+        "later":{},
+        "letter":{},
+        "between":{},
+        "country":{},
+        "its":{},
+        "about":{},
+        "but":{},
+        "different":{}
+      }
+    },
+    "θ": {
+      "words": {
+        "thanks": {},
+        "theatre": {},
+        "theme": {},
+        "thin": {},
+        "threat": {},
+        "bath": {},
+        "both": {},
+        "death": {},
+        "anything":{},
+        "everything": {},
+        "nothing": {},
+        "something": {}
+      }
+    },
+    "tʃ": {
+      "words": {
+        "chair":{},
+        "challenge":{},
+        "champion":{},
+        "each":{},
+        "much":{},
+        "reach":{},
+        "batch":{},
+        "catch":{},
+        "sketch":{},
+        "achieve":{},
+        "teacher":{},
+        "adventure": {}
+      }
+    },
+    "s": {
+      "words": {
+        "celebrate":{},
+        "cell":{},
+        "cent":{},
+        "center":{},
+        "sad":{},
+        "sale":{},
+        "same":{},
+        "experience":{},
+        "face":{},
+        "ice":{},
+        "base":{},
+        "case": {}
+      }
+    },
+    "ʃ": {
+      "words": {
+        "cash": {},
+        "crash": {},
+        "dish": {},
+        "commission": {},
+        "depression": {},
+        "action": {},
+        "assumption": {},
+        "condition": {},
+        "efficient": {},
+        "musician": {},
+        "racial": {},
+        "special": {}
+      }
+    },
+    "k": {
+      "words": {
+        "call":{},
+        "clock":{},
+        "coat":{},
+        "economy":{},
+        "education":{},
+        "fact":{},
+        "account":{},
+        "accuse": {},
+        "attack":{},
+        "black":{},
+        "ache":{},
+        "archive": {}
+      }
+    },
+    "b": {
+      "words": {
+        "ball":{},
+        "bear":{},
+        "bird":{},
+        "able":{},
+        "about":{},
+        "cabbage":{},
+        "club":{},
+        "disturb":{},
+        "grab":{},
+        "pub":{},
+        "verb":{},
+        "web": {}
+      }
+    },
+    "v": {
+      "words": {
+        "valley":{},
+        "value":{},
+        "van":{},
+        "above":{},
+        "arrive":{},
+        "believe":{},
+        "drive":{},
+        "expensive":{},
+        "give":{},
+        "activity":{},
+        "available":{},
+        "cover": {}
+      }
+    },
+    "d": {
+      "words": {
+        "daisy":{},
+        "day":{},
+        "deal":{},
+        "already":{},
+        "body":{},
+        "condition":{},
+        "bad":{},
+        "bed":{},
+        "child":{},
+        "good":{},
+        "hide":{},
+        "today": {}
+      }
+    },
+    "ð": {
+      "words": {
+        "than":{},
+        "that":{},
+        "the":{},
+        "although":{},
+        "either":{},
+        "bother":{},
+        "brother":{},
+        "clothing":{},
+        "bathe":{},
+        "booth":{},
+        "breathe":{},
+        "smooth":{}
+      }
+    },
+    "dʒ": {
+      "words": {
+        "gentleman":{},
+        "gender":{},
+        "gene":{},
+        "general":{},
+        "enjoy":{},
+        "injure":{},
+        "major":{},
+        "majority":{},
+        "refrigerator":{},
+        "original":{},
+        "region":{},
+        "strategy": {}
+      }
+    },
+    "z": {
+      "words": {
+        "zap":{},
+        "zebra":{},
+        "zero":{},
+        "zone":{},
+        "zoo":{},
+        "amaze":{},
+        "booze":{},
+        "buzz":{},
+        "breeze":{},
+        "citizen":{},
+        "crazy":{},
+        "dizzy": {}
+      }
+    },
+    "ʒ": {
+      "words": {
+        "usually":{},
+        "conclusion":{},
+        "confusion":{},
+        "decision":{},
+        "usual":{},
+        "visual":{},
+        "exposure":{},
+        "measure":{},
+        "pleasure":{},
+        "collage":{},
+        "massage":{},
+        "disclosure":{}
+      }
+    },
+    "g": {
+      "words": {
+        "game":{},
+        "garden":{},
+        "gave":{},
+        "gear":{},
+        "bag":{},
+        "big":{},
+        "bug":{},
+        "dialogue":{},
+        "again":{},
+        "ago":{},
+        "agree":{},
+        "begin": {}
+      }
+    },
+    "h": {
+      "words": {
+        "half":{},
+        "hand":{},
+        "happen" :{},
+        "hard":{},
+        "who":{},
+        "whole":{},
+        "whose":{},
+        "alcohol":{},
+        "behave":{},
+        "behaviour":{},
+        "behind":{},
+        "childhood":{}
+      }
+    },
+    "m": {
+      "words": {
+        "make":{},
+        "man":{},
+        "many":{},
+        "market":{},
+        "almost":{},
+        "company":{},
+        "example":{},
+        "family":{},
+        "arm":{},
+        "column":{},
+        "come":{},
+        "from":{}
+      }
+    },
+    "n": {
+      "words": {
+        "knee":{},
+        "knife":{},
+        "knock":{},
+        "know":{},
+        "again":{},
+        "begin":{},
+        "between":{},
+        "can":{},
+        "company":{},
+        "country":{},
+        "end":{},
+        "enough":{}
+      }
+    },
+    "ŋ": {
+      "words": {
+        "bang":{},
+        "gang":{},
+        "hang":{},
+        "hanger":{},
+        "bring":{},
+        "evening":{},
+        "king":{},
+        "morning":{},
+        "along":{},
+        "belong":{},
+        "long":{},
+        "song":{}
+      }
+    },
+    "r": {
+      "words": {
+        "air":{},
+        "share":{},
+        "their":{},
+        "where":{},
+        "hear":{},
+        "peer":{},
+        "year":{},
+        "door":{},
+        "more":{},
+        "pour":{},
+        "war":{},
+        "were":{}
+      }
+    },
+    "l": {
+      "words": {
+        "large":{},
+        "last":{},
+        "late":{},
+        "also":{},
+        "child":{},
+        "clear":{},
+        "actually":{},
+        "allow":{},
+        "challenge":{},
+        "control":{},
+        "deal":{},
+        "feel":{}
+      }
+    },
+    "w": {
+      "words": {
+        "wait":{},
+        "wake":{},
+        "waste":{},
+        "walk":{},
+        "wall":{},
+        "war":{},
+        "wander":{},
+        "wasp":{},
+        "watch":{},
+        "want":{},
+        "wash":{},
+        "was":{}
+      }
+    },
+    "j": {
+      "words": {
+        "accumulate":{},
+        "cute":{},
+        "distribute":{},
+        "argue":{},
+        "continue":{},
+        "hue":{},
+        "few":{},
+        "Matthew":{},
+        "nephew":{},
+        "interview":{},
+        "review":{},
+        "view": {}
+      }
+    }
+ }
+}
