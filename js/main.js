@@ -17,7 +17,7 @@ function loadJSON(src, callback) {
 
 document.addEventListener('DOMContentLoaded', function(){
 
-  loadJSON('word2.json', function(result){
+  loadJSON('word.json', function(result){
 
     let words  = JSON.parse(result),
         vowelsObj = words['vowels'],
