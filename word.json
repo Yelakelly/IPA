@@ -1,45 +1,5 @@
 {
- "vowels": {
-  "æ": {
-    "words": {
-      "and": {
-        "pron": "ənd"
-      },
-      "bad": {
-
-      },
-      "back": {
-
-      },
-      "pass": {
-
-      },
-      "had": {
-
-      },
-      "have": {
-
-      },
-      "jacket": {
-
-      },
-      "happened": {
-
-      },
-      "natural": {
-
-      },
-      "sample": {
-
-      },
-      "action": {
-
-      },
-      "after": {
-
-      }
-    }
-  },
+ "vowels": {"æ":{"words":{"and":{"pron":"/(&#x259;)n/"},"bad":{},"back":{},"pass":{},"had":{},"have":{},"jacket":{"pron":"/&#x2C8;d&#x292;ak&#x26A;t/"},"happened":{},"natural":{},"sample":{},"action":{},"after":{"pron":"/&#x2C8;&#x251;&#x2D0;ft&#x259;/"}}},"ɛ":{"words":{"said":{},"says":{},"friend":{"pron":"/fr&#x25B;nd/"},"guest":{"pron":"/&#x261;&#x25B;st/"},"guess":{},"when":{},"them":{"pron":"/&#xF0;&#x259;m/"},"head":{},"end":{},"best":{},"test":{},"red":{}}},"i":{"words":{"begin":{"pron":"/b&#x26A;&#x2C8;&#x261;&#x26A;n/"},"big":{},"bit":{},"bring":{},"did":{"pron":"/d&#x26A;d/"},"different":{},"finish":{},"fish":{},"fit":{},"give":{},"hit":{},"interest":{}}},"ɔ":{"words":{"ought":{},"ball":{},"tall":{},"mall":{},"law":{},"call":{},"jaw":{"pron":"/d&#x292;&#x254;&#x2D0;/"},"or":{},"more":{},"afford":{},"raw":{},"caught":{}}},"ə":{"words":{"never":{},"after":{},"just":{},"under":{},"other":{},"even":{},"woman":{},"family":{},"student":{},"us":{},"again":{},"another":{}}},"u":{"words":{"look":{},"book":{},"foot":{},"good":{},"put":{},"push":{},"pull":{},"full":{},"sugar":{},"would":{},"could":{},"should":{}}},"ʌ":{"words":{"some":{},"company":{},"much":{},"country":{},"other":{},"under":{},"until":{},"understand":{},"another":{},"come":{},"such":{},"become":{"pron":"/b&#x26A;&#x2C8;k&#x28C;m/"}}},"a_l":{"words":{"army":{"pron":"/&#x2C8;&#x251;&#x2D0;mi/"},"car":{},"party":{},"garden":{},"park":{},"father":{},"calm":{},"palm":{},"drama":{},"last":{},"class":{},"dance":{},"castle":{},"half":{}}},"i_l":{"words":{"be":{},"see":{},"meet":{},"sleep":{},"meal":{},"read":{},"leave":{},"sea":{},"team":{},"field":{},"believe":{},"receive":{}}},"u_l":{"words":{"do":{},"juice":{},"room":{},"move":{},"jewel":{},"fruit":{},"group":{},"flew":{},"crew":{},"chew":{},"blue":{},"through":{}}},"ɔ_l":{"words":{"for":{},"more":{},"also":{},"talk":{},"almost":{"pron":"/&#x2C8;&#x254;&#x2D0;lm&#x259;&#x28A;st/"},"although":{},"already":{},"organization":{},"call":{},"water":{},"important":{},"small":{}}},"ə_l":{"words":{"bird":{},"burden":{},"heard":{},"earth":{},"occur":{},"fur":{},"word":{},"hurt":{},"search":{},"circle":{},"thirteen":{},"return":{}}}},
   "ɛ": {
     "words": {
         "said": {

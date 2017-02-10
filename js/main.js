@@ -17,64 +17,36 @@ function loadJSON(src, callback) {
 
 document.addEventListener('DOMContentLoaded', function(){
 
-  loadJSON('word.json', function(result){
+  loadJSON('word2.json', function(result){
 
     let words  = JSON.parse(result),
         vowelsObj = words['vowels'],
         vowelsSounds = Object.keys(vowelsObj);
 
     var vowels  = new engGrid(document.querySelector('.vowels'), {
-        path: 'sounds/vowels/'
+        path: 'sounds/vowels/',
+        words: vowelsObj
     });
-
-    vowels.addSound(vowelsSounds);
-
-    for(let i = 0; i < vowelsSounds.length; i++){
-
-      let symbol = vowelsSounds[i],
-          words  = vowelsObj[symbol]['words'];
-
-      vowels.addWord(symbol, words);
-    }
 
     vowels.init();
 
-    let diphthongsObj     = words['diphtongs'],
-        diphthongsSounds  = Object.keys(diphthongsObj);
+
+    let diphthongsObj = words['diphtongs'];
 
     let diphthongs  = new engGrid(document.querySelector('.diphthongs'), {
-        path: 'sounds/diphthongs/'
+        path: 'sounds/diphthongs/',
+        words: diphthongsObj
     });
-
-    diphthongs.addSound(diphthongsSounds);
-
-
-    for(let i = 0; i < diphthongsSounds.length; i++){
-
-      let symbol = diphthongsSounds[i],
-          words  = diphthongsObj[symbol]['words'];
-
-      diphthongs.addWord(symbol, words);
-    }
 
     diphthongs.init();
 
-    let consonantsObj     = words['consonants'],
-        consonantsSounds  = Object.keys(consonantsObj);
+    let consonantsObj = words['consonants'];
 
     let consonants  = new engGrid(document.querySelector('.consonants'), {
-        path: 'sounds/consonants/'
+        path: 'sounds/consonants/',
+        words: consonantsObj
     });
 
-    consonants.addSound(consonantsSounds);
-
-    for(let i = 0; i < consonantsSounds.length; i++){
-
-      let symbol = consonantsSounds[i],
-          words  = consonantsObj[symbol]['words'];
-
-      consonants.addWord(symbol, words);
-    }
 
     consonants.init();
 
