@@ -1,135 +1,184 @@
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Подключение анонимного модуля
+        define(['IPA'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Node. Не работает с CommonJS напрямую,
+        // только CommonJS-образными средами, которые поддерживают
 
-  var engGrid = function(el, config){
-
-    this.el = el;
-
-    this.defaults = {
-      'colClass': '.ui__col',
-      'rowClass': '.ui__row',
-      'overlayClass': '.ui__overlay',
-      'closeButton': '.ui__overlay-close',
-      'headerClass': '.ui__header',
-      'path': 'sounds/',
-      'pathWords': 'sounds/words/',
-      'ext': '.mp3',
-      'buttonClass': '.ui__button',
-      'oWordClass': '.ui__o-word',
-      'words': {}
-    };
-
-    this.currentSound = '';
-
-    for(let item in config){
-      this.defaults[item] = config[item];
+        // module.exports, как Node.
+        module.exports = factory(require('IPA'));
+    } else {
+        // Глобальные переменные браузера (root это window)
+        root.IPA = factory(root.IPA);
     }
+}(this, function () {
 
-     this.sounds =  this.defaults.words;
-  }
+  var engGrid = function(el, options){
 
+      var settings = {
+          'colClass': '.ui__col',
+          'rowClass': '.ui__row',
+          'overlayClass': '.ui__overlay',
+          'closeButton': '.ui__overlay-close',
+          'headerClass': '.ui__header',
+          'path': 'sounds/',
+          'pathWords': 'sounds/words/',
+          'ext': '.mp3',
+          'buttonClass': '.ui__button',
+          'oWordClass': '.ui__o-word',
+          'words': {}
+      };
 
-  engGrid.prototype.playSound = function(sound){
+      var currentSound = '';
 
-    if(this.currentSound){
-      this.currentSound.pause();
-    }
-
-    let soundPath = this.defaults.path + sound + this.defaults.ext;
-
-    this.currentSound = new Audio(soundPath);
-    this.currentSound.play();
-  }
-
-  engGrid.prototype.playWord = function(word){
-
-    if(this.currentSound){
-      this.currentSound.pause();
-    }
-
-    let soundPath = this.defaults.pathWords + word + this.defaults.ext;
-
-    this.currentSound = new Audio(soundPath);
-    this.currentSound.play();
-  }
-
-  engGrid.prototype.bindUIActions = function(){
-
-    let uiContainer     = this.el.querySelectorAll(this.defaults['colClass']),
-        uiOverlay       = this.el.querySelector(this.defaults['overlayClass']),
-        uiCloseButton   = this.el.querySelector(this.defaults['closeButton']);
-
-    let _self = this,
-        soundsNames = Object.keys(this.sounds);
-
-    for(let i = 0; i < soundsNames.length; i++){
-      let uiWords         = Object.keys(this.sounds[soundsNames[i]].words),
-          uiCurrentCol    = uiContainer[i],
-          uiCurrentButton = uiCurrentCol.querySelector(this.defaults['buttonClass']);
-
-      if(!uiWords){
-        uiCurrentCol.classList.add('is-empty');
+      for(var item in options){
+          settings[item] = options[item];
       }
 
-      uiCurrentCol.addEventListener('click', function(e){
-        if(e.target !== this){
-          return false;
+      var sounds = settings.words;
+
+      /**
+       * Play a sound.
+       * @function
+       * @param {string} sound - The sound as name of file (.mp3).
+       */
+
+      function playSound(sound){
+        if(currentSound){
+          currentSound.pause();
         }
 
-        _self.playSound(soundsNames[i]);
-      });
+        var soundPath = settings.path + sound + settings.ext;
 
-      uiCurrentButton.addEventListener('click', function(){
-          for(let j = 0; j < uiWords.length; j++){
-            let word       = document.createElement("div"),
-                _className = _self.defaults['oWordClass'].replace('.', '');
+        currentSound = new Audio(soundPath);
+        currentSound.play();
+      }
 
-            word.setAttribute('class', _className.replace('.', ''));
+      /**
+       * Play a word.
+       * @function
+       * @param {string} word - The word as name of file (.mp3).
+       */
 
-            let wordWrapper  = document.createElement("span"),
-                wordTooltip  = document.createElement("span"),
-                wordText     = document.createElement("span");
+      function playWord(word){
+        if(currentSound){
+            currentSound.pause();
+        }
 
-            wordWrapper.setAttribute('class', _className + '__wrapper');
-            wordTooltip.setAttribute('class', _className + '__tooltip');
-            wordText.setAttribute('class', _className + '__text');
+        var soundPath = settings.pathWords + word + settings.ext;
 
-            let pron = _self.sounds[soundsNames[i]].words[uiWords[j]].pron;
+        currentSound = new Audio(soundPath);
+        currentSound.play();
+      }
 
+      /**
+       * Create markup of a word instance.
+       * @function
+       * @param {string} word - current word
+       * @param {string} tooltip - tooltip on hover
+       * @returns {string} markup - html instance of current word
+       */
 
-            if(pron){
-              wordTooltip.setAttribute('data-balloon', htmlDecode(pron));
+      function createWordHtml(word, tooltip){
+          var markup       = document.createElement("div"),
+              _className = settings['oWordClass'].replace('.', '');
+          markup.setAttribute('class', _className.replace('.', ''));
+
+          var wordWrapper  = document.createElement("span"),
+              wordTooltip  = document.createElement("span"),
+              wordText     = document.createElement("span");
+
+          wordWrapper.setAttribute('class', _className + '__wrapper');
+          wordTooltip.setAttribute('class', _className + '__tooltip');
+          wordText.setAttribute('class', _className + '__text');
+
+          var t = wordWrapper.appendChild(wordTooltip),
+              tChild = t.appendChild(wordText);
+
+          tChild.innerHTML = word;
+
+          markup.appendChild(wordWrapper);
+
+          if(tooltip){
+              wordTooltip.setAttribute('data-balloon', htmlDecode(tooltip));
               wordTooltip.setAttribute('data-balloon-pos', 'up');
-            }
-
-            let t      = wordWrapper.appendChild(wordTooltip),
-                tChild = t.appendChild(wordText);
-
-            tChild.innerHTML = uiWords[j];
-            word.appendChild(wordWrapper);
-
-            word.addEventListener('click', function(){
-              _self.playWord(uiWords[j]);
-            });
-
-            uiOverlay.appendChild(word);
           }
 
-          uiOverlay.classList.add('is-active');
-      });
-    }
+          markup.addEventListener('click', function(){
+              playWord(word);
+          });
 
-    uiCloseButton.addEventListener('click', function(){
-      var oWords = _self.el.querySelectorAll(_self.defaults['oWordClass']);
+          return markup;
+      }
 
-      oWords.forEach(function(elem){
-        elem.parentNode.removeChild(elem);
-      });
+      /**
+       * Bind all events.
+       * @function
+       * @return {undefined}
+       */
 
-      uiOverlay.classList.remove('is-active');
-    });
+      function bindUIAction(){
 
-  }
+          var uiContainer     = el.querySelectorAll(settings['colClass']),
+              uiOverlay       = el.querySelector(settings['overlayClass']),
+              uiCloseButton   = el.querySelector(settings['closeButton']);
 
+          var soundsNames = Object.keys(sounds);
 
-  engGrid.prototype.init = function(){
-    this.bindUIActions();
+          for(var i = 0; i < soundsNames.length; i++){
+              var uiCurrentCol    = uiContainer[i],
+                  uiCurrentButton = uiCurrentCol.querySelector(settings['buttonClass']);
+
+              (function(i){
+                var uiWords = Object.keys(sounds[soundsNames[i]].words);
+
+                if(!uiWords){
+                    uiCurrentCol.classList.add('is-empty');
+                }
+
+                uiCurrentCol.addEventListener('click', function(e){
+                    if(e.target !== this){
+                        return false;
+                    }
+                    playSound(soundsNames[i]);
+                });
+
+                uiCurrentButton.addEventListener('click', function(){
+                      for(var j = 0; j < uiWords.length; j++){
+                          var pron = sounds[soundsNames[i]].words[uiWords[j]].pron;
+                          uiOverlay.appendChild(createWordHtml(uiWords[j], pron));
+                      }
+
+                      uiOverlay.classList.add('is-active');
+                  });
+
+              })(i);
+          }
+
+          uiCloseButton.addEventListener('click', function(){
+              var oWords = el.querySelectorAll(settings['oWordClass']);
+
+              for(var i = 0; i < oWords.length; i++){
+                  oWords[i].parentNode.removeChild(oWords[i]);
+              }
+
+              uiOverlay.classList.remove('is-active');
+          });
+
+      }
+
+      bindUIAction();
+
+      return {
+        'playWord': playWord,
+        'playSound': playSound
+      }
+
   };
+
+  return engGrid;
+
+}));
+
+

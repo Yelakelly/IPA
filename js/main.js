@@ -6,10 +6,10 @@ function loadJSON(src, callback) {
   
   xobj.open('GET', src, true); 
   xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-          // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-          callback(xobj.responseText);
-        }
+    if (xobj.readyState == 4 && xobj.status == "200") {
+      // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+      callback(xobj.responseText);
+    }
   };
 
   xobj.send(null);  
@@ -17,39 +17,28 @@ function loadJSON(src, callback) {
 
 document.addEventListener('DOMContentLoaded', function(){
 
+  var engGrid = window.IPA;
+
   loadJSON('word.json', function(result){
 
-    let words  = JSON.parse(result),
-        vowelsObj = words['vowels'],
-        vowelsSounds = Object.keys(vowelsObj);
+    var words = JSON.parse(result);
 
-    var vowels  = new engGrid(document.querySelector('.vowels'), {
+    var vowels = engGrid(document.querySelector('.vowels'), {
         path: 'sounds/vowels/',
-        words: vowelsObj
+        words: words['vowels']
     });
 
-    vowels.init();
-
-
-    let diphthongsObj = words['diphtongs'];
-
-    let diphthongs  = new engGrid(document.querySelector('.diphthongs'), {
+    var diphthongs  = engGrid(document.querySelector('.diphthongs'), {
         path: 'sounds/diphthongs/',
-        words: diphthongsObj
+        words: words['diphtongs']
     });
 
-    diphthongs.init();
 
-    let consonantsObj = words['consonants'];
-
-    let consonants  = new engGrid(document.querySelector('.consonants'), {
+    var consonants  = engGrid(document.querySelector('.consonants'), {
         path: 'sounds/consonants/',
-        words: consonantsObj
+        words: words['consonants']
     });
 
-
-    consonants.init();
-
-  }); 
+  });
 
 });

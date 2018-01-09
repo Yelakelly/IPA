@@ -230,9 +230,7 @@ h1{
 
 .ui__col {
   line-height: 100px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+  min-width:25%;
   min-height: 100px;
   border: 1px solid #fff;
   position: relative;
@@ -314,8 +312,8 @@ h1{
   position: absolute;
   width: 100%;
   height: 100%;
-  left:0px;
-  top:0px;
+  left:0;
+  top:0;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -349,20 +347,17 @@ h1{
   background: #1abc9c;
 }
 
-
 .ui__overlay.is-active{
   opacity:1;
   pointer-events: auto;
 }
 
 .ui__o-word{
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+  min-width:25%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding:0px 5px;
+  padding:0 5px;
   position: relative;
 }
 
@@ -395,9 +390,7 @@ h1{
 }
 
 .diphthongs {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 48%;
-          flex: 0 0 48%;
+  min-width: 48%;
   margin-left: 2%;
   color: #fff;
   position: relative;
@@ -421,9 +414,7 @@ h1{
 
 .consonants__col {
   background: #1abc9c;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 12.5%;
-          flex: 0 0 12.5%;
+  min-width: 12.5%;
 }
 
 .consonants-header {
@@ -438,17 +429,13 @@ h1{
 @media(max-width: 768px){
   .vowels,
   .diphthongs{
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
-        margin: 10px 0px;
+      min-width: 100%;
+      margin: 10px 0;
   }
 }
 
 @media(max-width: 480px){
   .ui__col{
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    min-width: 50%;
   }
 }
